@@ -1,8 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="TodoApp">
 <head>
     <meta charset="UTF-8">
     <title>Web Dev Course Home Page</title>
+    <script src="/vendor/angular/angular.js"></script>
+    <script src="app.js"></script>
+
+
+
+    <link href="..vender/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="..vender/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+
+
+
+
 </head>
 <body>
     <h1>Web Dev Course Home Page</h1>
@@ -27,11 +39,18 @@
             <a href="test/index.html">Test MongoDB</a>
         </li>
         <li>
-            <a href="https://github.com/jannunzi/webdev-summer1-2017">Your public repository at GitHub.com</a>
+            <a href="https://github.com/llung/Lung-Lauren-webdev">Your public repository at GitHub.com</a>
         </li>
         <li>
             <a href="/lectures">Lectures</a>
         </li>
     </ul>
+
+    <div ng-controller="TodoController">
+        {{hello}}
+        <input ng-model="goodbye"/>
+        {{goodbye}}
+    </div>
+
 </body>
 </html>
