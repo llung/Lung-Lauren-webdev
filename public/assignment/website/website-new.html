@@ -2,9 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Add Website</title>
+
+    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="../../vendor/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet"/>
+
 </head>
 <body>
+<div class="lal lal-website-new">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">New Website</a>
+            </div>
 
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="website-list.html">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../user/profile.html">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-3 visible-lg lal-split-view-left">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Address Book App
+                        <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
+                    </li>
+                    <li class="list-group-item">
+                        Blogger
+                        <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
+                    </li>
+                    <li class="list-group-item">
+                        Blogging App
+                        <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
+                    <li class="list-group-item">
+                        Script Testing App
+                        <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div class="col-lg-9 lal-split-view-right">
+                <label for="website-name">Name</label><br/>
+                <input name="website-name"
+                       id="website-name"
+                       type="text"
+                       placeholder="Website name"
+                       class="form-control"/>
+
+                <label for="website-desription">Description</label><br/>
+                <textarea name="website-desription"
+                          id="website-desription"
+                          placeholder="Website description"
+                          rows="5"
+                          class="form-control"></textarea>
+            </div>
+        </div>
+
+    </div>
+
+</div>
 </body>
 </html>
