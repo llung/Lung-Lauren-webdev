@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Pages</title>
+    <title>Image Widget</title>
 
     <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -12,10 +12,9 @@
 </head>
 
 <body>
-<div class="lal lal-page-list">
+<div class="lal lal-widget-image">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <ul class="nav navbar-nav navbar-left">
                 <li>
                     <a href="widget-list.html">
@@ -23,6 +22,7 @@
                     </a>
                 </li>
             </ul>
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
@@ -30,12 +30,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Choose Widget</a>
+                <a class="navbar-brand" href="#">Widget Edit</a>
             </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="widget-list.html">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 
-    <nav class="navbar navbar-default navbar-fixed-bottom">
+    <nav class="navbar navbar-fixed-bottom">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -54,45 +66,44 @@
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-
-
     <div class="container-fluid">
+        <label for="youtube-name">Name</label><br/>
+        <input name="youtube-name"
+               id="youtube-name"
+               type="text"
+               class="form-control"/>
 
-        <ul class="list-group">
-            <li class="list-group-item">
-                <a href="widget-heading.html">Header</a>
-            </li>
-            <li class="list-group-item">
-                <a href="#">Label</a>
-            </li>
-            <li class="list-group-item">
-                <a href="#">HTML</a>
-            </li>
-            <li class="list-group-item">
-                <a href="#">Text Input</a>
-            </li>
-            <li class="list-group-item">
-                <a href="#">Link</a>
-            </li>
-            <li class="list-group-item">
-                <a href="#">Button</a>
-            </li>
-            <li class="list-group-item">
-                <a href="widget-image.html">Image</a>
-            </li>
-            <li class="list-group-item">
-                <a href="widget-youtube.html">YouTube</a>
-            </li>
-            <li class="list-group-item">
-                <a href="#">Data Table</a>
-            </li>
-            <li class="list-group-item">
-                <a href="#">Repeater</a>
-            </li>
-        </ul>
+        <label for="youtube-text">Text</label><br/>
+        <input name="youtube-text"
+               id="youtube-text"
+               type="text"
+               class="form-control"/>
 
+        <label for="youtube-url">URL</label><br/>
+        <input name="youtube-url"
+               id="youtube-url"
+               type="text"
+               placeholder="https://youtu.be/dQw4w9WgXcQ"
+               class="form-control"/>
+
+        <label for="youtube-width">Width</label><br/>
+        <input name="youtube-width"
+               id="youtube-width"
+               placeholder="100%"
+               type="text"
+               class="form-control"/>
+
+        <label for="youtube-upload">Upload</label><br/>
+        <input name="youtube-upload"
+               id="youtube-upload"
+               placeholder="Choose File No File Chosen"
+               type="text"
+               class="form-control"/>
+        <p>
+            <a href="#" class="btn btn-block btn-primary" role="button">Upload Image</a>
+            <a href="widget-list.html" class="btn btn-block btn-danger" role="button">Delete</a>
+        </p>
     </div>
-
 </div>
 </body>
 </html>
