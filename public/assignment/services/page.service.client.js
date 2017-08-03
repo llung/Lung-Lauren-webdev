@@ -1,4 +1,4 @@
-a(function () {
+(function () {
     angular
         .module("WebAppMaker")
         .factory("pageService", pageService);

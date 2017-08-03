@@ -12,7 +12,7 @@
     <input name="password"
            id="password"
            ng-model="model.user.lastName"
-           type="passwrod"
+           type="password"
            placeholder="password"
            class="form-control"/>
 
@@ -25,8 +25,8 @@
     </form>
 
     <p>
-        <a href="profile.html" class="btn btn-block btn-primary" role="button">Register</a>
-        <a href="login.html" class="btn btn-block btn-danger" role="button">Cancel</a>
+        <a ng-click="model.registerUser(user)" class="btn btn-block btn-primary" role="button">Register</a>
+        <a href="#!/login" class="btn btn-block btn-danger" role="button">Cancel</a>
     </p>
 
 </div>
