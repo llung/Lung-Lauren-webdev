@@ -4,7 +4,7 @@
         .controller("NewWidgetController", NewWidgetController)
 
     function NewWidgetController() {
-
+        var vm = this;
     }
 
 })();

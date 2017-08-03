@@ -4,7 +4,7 @@
         .controller("WidgetListController", WidgetListController)
 
     function WidgetListController() {
-
+        var vm = this;
     }
 
 })();

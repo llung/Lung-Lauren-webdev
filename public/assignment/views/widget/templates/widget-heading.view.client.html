@@ -57,12 +57,14 @@
         <label for="heading-name">Name</label><br/>
         <input name="heading-name"
                id="heading-name"
+               ng-model="model.widget.widgetName"
                type="text"
                class="form-control"/>
 
         <label for="heading-text">Text</label><br/>
         <input name="heading-text"
                id="heading-text"
+               ng-model="model.widget.widgetText"
                type="text"
                placeholder="US Senate Reaches Compromise on Energy"
                class="form-control"/>
@@ -70,6 +72,7 @@
         <label for="heading-size">Size</label><br/>
         <input name="heading-size"
                id="heading-size"
+               ng-model="model.widget.widgetSize"
                type="number"
                placeholder="3"
                class="form-control"/>

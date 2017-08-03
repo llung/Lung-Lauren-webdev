@@ -58,13 +58,15 @@
         <label for="website-name">Website Name</label><br/>
         <input name="website-name"
                id="website-name"
+               ng-model="model.website.websiteName"
                type="text"
                placeholder="Website name"
                class="form-control"/>
 
-        <label for="website-desription">Website Description</label><br/>
-        <textarea name="website-desription"
-                  id="website-desription"
+        <label for="website-description">Website Description</label><br/>
+        <textarea name="website-description"
+                  id="website-description"
+                  ng-model="model.website.websiteDescription"
                   type="text"
                   placeholder="Website description"
                   class="form-control"></textarea>

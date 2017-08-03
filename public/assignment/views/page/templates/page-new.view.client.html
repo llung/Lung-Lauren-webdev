@@ -55,9 +55,11 @@
 
     <div class="container-fluid">
 
+        <form>
         <label for="page-name">Name</label><br/>
         <input name="page-name"
                id="page-name"
+               ng-model="model.page.pageName"
                type="text"
                placeholder="Page Name"
                class="form-control"/>
@@ -65,8 +67,10 @@
         <label for="page-title">Title</label><br/>
         <input name="page-title"
                id="page-title"
+               ng-model="model.page.password"
                type="text"
                placeholder="Page Title"
                class="form-control"/>
+        </form>
     </div>
 </div>

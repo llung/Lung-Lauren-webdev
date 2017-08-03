@@ -4,7 +4,7 @@
         .controller("NewWebsiteController", NewWebsiteController)
 
     function NewWebsiteController() {
-
+        var vm = this;
     }
 
 })();

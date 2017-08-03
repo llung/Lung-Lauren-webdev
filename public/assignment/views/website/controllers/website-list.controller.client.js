@@ -4,7 +4,7 @@
         .controller("WebsiteListController", WebsiteListController)
 
     function WebsiteListController() {
-
+        var vm = this;
     }
 
 })();
