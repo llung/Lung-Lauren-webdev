@@ -3,8 +3,8 @@
         .module("WebAppMaker")
         .controller("EditWidgetController", EditWidgetController)
 
-    function EditWidgetController() {
-        var vm = this;
+    function EditWidgetController(widgetService) {
+        var model = this;
     }
 
 })();

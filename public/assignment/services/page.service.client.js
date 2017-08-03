@@ -1,6 +1,6 @@
 a(function () {
     angular
-        .module("WamApp")
+        .module("WebAppMaker")
         .factory("pageService", pageService);
 
     function pageService($http) {

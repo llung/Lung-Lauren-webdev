@@ -4,10 +4,10 @@
         .controller("ProfileController", ProfileController)
 
         function ProfileController($routeParams, UserService) {
-            var vm = this;
-            vm.userId = $routeParams["userId"];
+            var model = this;
+            model.userId = $routeParams["userId"];
             function init() {
-                vm.user = UserService.findUserById(vm.userId);
+                model.user = UserService.findUserById(model.userId);
             }
             init();
 

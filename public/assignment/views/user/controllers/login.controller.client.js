@@ -3,8 +3,8 @@
         .module("WebAppMaker")
         .controller("LoginController", LoginController)
 
-        function LoginController() {
-            var vm = this;
+        function LoginController(userService) {
+            var model = this;
         }
 
 })();

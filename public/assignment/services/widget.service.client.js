@@ -1,9 +1,9 @@
 (function () {
     angular
-        .module("WamApp")
-        .factory("userService", userService);
+        .module("WebAppMaker")
+        .factory("widgetService", widgetService);
 
-    function userService($http) {
+    function widgetService($http) {
 
         var widgets = [
             {"_id": "123", "widgetType": "HEADING", "pageId": "321", "size": 2, "text": "GIZMODO"},

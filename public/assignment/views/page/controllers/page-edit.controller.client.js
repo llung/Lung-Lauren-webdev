@@ -3,8 +3,8 @@
         .module("WebAppMaker")
         .controller("EditPageController", EditPageController)
 
-    function EditPageController() {
-        var vm = this;
+    function EditPageController(pageService) {
+        var model = this;
     }
 
 

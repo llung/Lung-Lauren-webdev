@@ -3,8 +3,8 @@
         .module("WebAppMaker")
         .controller("NewWebsiteController", NewWebsiteController)
 
-    function NewWebsiteController() {
-        var vm = this;
+    function NewWebsiteController(websiteService) {
+        var model = this;
     }
 
 })();

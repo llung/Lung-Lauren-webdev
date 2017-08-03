@@ -4,10 +4,10 @@
         .controller("EditWebsiteController", EditWebsiteController)
 
     function EditWebsiteController($routeParams, websiteService) {
-        var vm = this;
-        vm._id = $routeParams["_id"];
+        var model = this;
+        model._id = $routeParams["_id"];
         function init() {
-            vm.website = websiteService.findWebsiteById(vm._id);
+            model.website = websiteService.findWebsiteById(model._id);
         }
         init();
 

@@ -3,8 +3,8 @@
         .module("WebAppMaker")
         .controller("NewPageController", NewPageController)
 
-    function NewPageController() {
-        var vm = this;
+    function NewPageController(pageService) {
+        var model = this;
     }
 
 })();

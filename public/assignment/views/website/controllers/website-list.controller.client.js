@@ -3,8 +3,8 @@
         .module("WebAppMaker")
         .controller("WebsiteListController", WebsiteListController)
 
-    function WebsiteListController() {
-        var vm = this;
+    function WebsiteListController(websiteService) {
+        var model = this;
     }
 
 })();

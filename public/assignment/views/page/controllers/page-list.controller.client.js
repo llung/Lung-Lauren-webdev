@@ -3,8 +3,8 @@
         .module("WebAppMaker")
         .controller("PageListController", PageListController)
 
-    function PageListController() {
-        var vm = this;
+    function PageListController(pageService) {
+        var model = this;
     }
 
 })();

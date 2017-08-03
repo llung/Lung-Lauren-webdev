@@ -3,7 +3,13 @@
         .module("WebAppMaker")
         .config(Config);
 
-    function Config($routeProvider) {
+    function Config($routeProvider, $httpProvider) {
+
+        $httpProvider.defaults.headers.post['Content-Type'] = 'application/json; charset=utf-8';
+        $httpProvider.defaults.headers.post['Accept'] = 'application/json, text/javascript';
+        $httpProvider.defaults.headers.post['Access-Control-Max-Age'] = '1728000';
+
+
         $routeProvider
             .when("/login", {
                 templateUrl: "views/user/templates/login.view.client.html",

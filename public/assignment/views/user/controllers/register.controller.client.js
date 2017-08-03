@@ -3,8 +3,8 @@
         .module("WebAppMaker")
         .controller("RegisterController", RegisterController)
 
-        function RegisterController() {
-            var vm = this;
+        function RegisterController(userService) {
+            var model = this;
     }
 
 })();
