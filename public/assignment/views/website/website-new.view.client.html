@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Add Website</title>
-
-    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link href="../../vendor/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="../style.css" rel="stylesheet"/>
-
-</head>
-<body>
-<div class="lal lal-page-new">
+<div class="lal lal-website-new">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <ul class="nav navbar-nav navbar-left">
                 <li>
-                    <a href="page-list.html">
+                    <a href="website-list.html">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>
                 </li>
@@ -29,7 +16,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">New Page</a>
+                <a class="navbar-brand" href="#">New Website</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,20 +55,45 @@
 
     <div class="container-fluid">
 
-        <label for="page-name">Name</label><br/>
-        <input name="page-name"
-               id="page-name"
-               type="text"
-               placeholder="Page Name"
-               class="form-control"/>
+        <div class="row">
+            <div class="col-sm-3 visible-lg lal-split-view-left">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Address Book App
+                        <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
+                    </li>
+                    <li class="list-group-item">
+                        Blogger
+                        <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
+                    </li>
+                    <li class="list-group-item">
+                        Blogging App
+                        <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
+                    <li class="list-group-item">
+                        Script Testing App
+                        <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
+                    </li>
 
-        <label for="page-title">Title</label><br/>
-        <input name="page-title"
-               id="page-title"
-               type="text"
-               placeholder="Page Title"
-               class="form-control"/>
+
+                </ul>
+            </div>
+            <div class="col-lg-9 lal-split-view-right">
+                <label for="website-name">Name</label><br/>
+                <input name="website-name"
+                       id="website-name"
+                       type="text"
+                       placeholder="Website name"
+                       class="form-control"/>
+
+                <label for="website-desription">Description</label><br/>
+                <textarea name="website-desription"
+                          id="website-desription"
+                          placeholder="Website description"
+                          rows="5"
+                          class="form-control"></textarea>
+            </div>
+        </div>
+
     </div>
+
 </div>
-</body>
-</html>

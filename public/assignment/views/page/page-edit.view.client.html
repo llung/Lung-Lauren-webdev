@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit</title>
-
-    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link href="../../vendor/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="../style.css" rel="stylesheet"/>
-
-</head>
-<body>
-<div class="lal lal-website-edit">
+<div class="lal lal-page-edit">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <ul class="nav navbar-nav navbar-left">
                 <li>
-                    <a href="website-list.html">
+                    <a href="page-list.html">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>
                 </li>
@@ -29,7 +16,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Edit Website</a>
+                <a class="navbar-brand" href="#">Edit Page</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,7 +24,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="website-list.html">
+                        <a href="page-list.html">
                             <span class="glyphicon glyphicon-ok"></span>
                         </a>
                     </li>
@@ -65,24 +52,22 @@
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-
     <div class="container-fluid">
-
-        <label for="website-name">Website Name</label><br/>
-        <input name="website-name"
-               id="website-name"
+        <label for="blog-post-name">Name</label><br/>
+        <input name="blog-post-name"
+               id="blog-post-name"
                type="text"
-               placeholder="Website name"
+               placeholder="Blog Post"
                class="form-control"/>
 
-        <label for="website-desription">Website Description</label><br/>
-        <textarea name="website-desription"
-                  id="website-desription"
-                  type="text"
-                  placeholder="Website description"
-                  class="form-control"></textarea>
+        <label for="page-title">Title</label><br/>
+        <input name="page-title"
+               id="page-title"
+               type="text"
+               placeholder="Page Title"
+               class="form-control"/>
+        <p>
+            <a href="page-list.html" class="btn btn-block btn-danger" role="button">Delete</a>
+        </p>
     </div>
-
 </div>
-</body>
-</html>

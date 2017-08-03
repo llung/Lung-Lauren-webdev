@@ -1,28 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Websites</title>
 
-    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link href="../../vendor/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="../style.css" rel="stylesheet"/>
-
-</head>
-
-<body>
-<div class="lal lal-website-list">
+<div class="lal lal-widget-image">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <ul class="nav navbar-nav navbar-left">
                 <li>
-                    <a href="../user/profile.html">
+                    <a href="widget-list.html">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>
                 </li>
             </ul>
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
@@ -30,15 +17,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Websites</a>
+                <a class="navbar-brand" href="#">Widget Edit</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="website-new.html">
-                            <span class="glyphicon glyphicon-plus"></span>
+                        <a href="widget-list.html">
+                            <span class="glyphicon glyphicon-ok"></span>
                         </a>
                     </li>
                 </ul>
@@ -46,7 +34,7 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    <nav class="navbar navbar-default navbar-fixed-bottom">
+    <nav class="navbar navbar-fixed-bottom">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -65,30 +53,29 @@
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-
-
     <div class="container-fluid">
+        <label for="heading-name">Name</label><br/>
+        <input name="heading-name"
+               id="heading-name"
+               type="text"
+               class="form-control"/>
 
-        <ul class="list-group">
-            <li class="list-group-item">
-                <a href="../page/page-list.html">Address Book App</a>
-                <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
-            </li>
-            <li class="list-group-item">
-                <a href="../page/page-list.html">Blogger</a>
-                <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
-            </li>
-            <li class="list-group-item">
-                <a href="../page/page-list.html">Blogging App</a>
-                <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
-            <li class="list-group-item">
-            <a href="../page/page-list.html">Script Testing App</a>
-            <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
-            </li>
-        </ul>
+        <label for="heading-text">Text</label><br/>
+        <input name="heading-text"
+               id="heading-text"
+               type="text"
+               placeholder="US Senate Reaches Compromise on Energy"
+               class="form-control"/>
 
+        <label for="heading-size">Size</label><br/>
+        <input name="heading-size"
+               id="heading-size"
+               type="number"
+               placeholder="3"
+               class="form-control"/>
+
+        <p>
+            <a href="widget-list.html" class="btn btn-block btn-danger" role="button">Delete</a>
+        </p>
     </div>
-
 </div>
-</body>
-</html>
