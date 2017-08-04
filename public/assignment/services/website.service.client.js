@@ -21,16 +21,20 @@
         this.updateWebsite = updateWebsite;
         this.deleteWebsite = deleteWebsite;
 
+        //retrieves the website in local 'websites' array whose _id matches the websiteId parameter
         function findWebsiteById(userId, websiteId) {
             var url = "/api/user/" + userId + "/website/" + websiteId;
             return $http.get(url);
         }
 
+        //adds the website parameter instance to the local 'websites' array. The new website's 'developerId' is set to
+        //the userId parameter
         function createWebsite(userId, website) {
             var url = "/api/user/" + userId + "/website";
             return $http.post(url, website);
         }
 
+        //retrieves the websites in local websites array whose developerId matches the parameter userId
         function findWebsitesByUser(userId) {
 
             var url = "/api/user/" + userId + "/website";
@@ -40,10 +44,12 @@
                 });
         }
 
+        //updates the website in local 'websites' array whose _id matches the websiteId parameter
         function updateWebsite(websiteID, website) {
             //return $http
         }
 
+        //removes the website from local websites array whose _id matches the websiteId parameter
         function deleteWebsite(websiteID) {
             //$http.remove(???);
         }

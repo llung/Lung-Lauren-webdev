@@ -1,7 +1,7 @@
 (function() {
     angular
         .module("WebAppMaker")
-        .controller("ProfileController", ProfileController)
+        .controller("ProfileController", ProfileController);
 
         function ProfileController($routeParams, UserService) {
             var model = this;
@@ -12,5 +12,4 @@
             init();
 
         }
-
 })();

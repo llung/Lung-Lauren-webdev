@@ -19,7 +19,7 @@
                 model.errorMessage = "User not found";
                 return;
             }
-            var promise = userService.findUserByUsernameAndPassword(user.username, user.password);
+            var promise = userService.findUserByCredentials(user.username, user.password);
             promise
                 .then(function (response) {
                     user = response.data;

@@ -30,22 +30,27 @@
         };
         return api;
 
+        //adds the widget parameter instance to the local widgets array. The new widget's pageId is set to the pageId parameter
         function createWidget(pageId, widget) {
 
         }
 
+        //retrieves the widgets in local widgets array whose pageId matches the parameter pageId
         function findWidgetByPageID(pageId) {
 
         }
 
+        //retrieves the widget in local widgets array whose _id matches the widgetId parameter
         function findWidgetById(widgetId) {
 
         }
 
+        //updates the widget in local widgets array whose _id matches the widgetId parameter
         function updateWidget(widgetId, widget) {
 
         }
 
+        //removes the widget from local widgets array whose _id matches the widgetId parameter
         function deleteWidget(WidgetId) {
 
         }

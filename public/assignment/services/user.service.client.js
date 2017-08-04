@@ -23,31 +23,37 @@
         };
         return api;
 
+        //add the 'user' parameter to the local array
         function createUser(user) {
             users.add(user)
         }
 
+        //updates the user in the local 'users' array whose _id matches the userId parameter
         function updateUser(userId, user) {
             var url = "/api/user/" + userId;
 
             return $http.put(url, user);
         }
 
-        function registerUser(user) {      /////////
+        //
+        function registerUser(user) {      /////////same as createUser??
             var url = "/api/user";
 
             return $http.post(url, user);
         }
 
+        //returns the user in local 'user' array whose username matches the 'username' parameter
         function findUserByUsername(username) {
             var url = "/api/user?username="+username;
             return $http.get(url);
         }
 
+        //returns the user in local 'userId' array whose username matches the 'userId' parameter
         function findUserById(userId) {
             return $http.get("/api/user/"+userId);
         }
 
+        //return the user whose username and password mathe the username and password parameter
         function findUserByCredentials(username, password) {
 
             var url = "/api/user?username="+username+"&password="+password;
@@ -56,6 +62,7 @@
             return $http.get(url);
         }
 
+        //remove the user whose _user whose _id matches the userId parameter
         function deleteUser(userID) {
             var url = "/api/user/" + userId;
 
