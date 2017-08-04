@@ -54,7 +54,7 @@
                    ng-model="model.user.username"
                    readonly
                    type="text"
-                   value="Lungl-u"
+                   placeholder="alice"
                    class="form-control"/>
 
             <label for="email">Email</label><br/>
@@ -62,7 +62,7 @@
                    id="email"
                    ng-model="model.user.email"
                    type="email"
-                   placeholder="lung.l@husky.neu.edu"
+                   placeholder="alice@wonderland.com"
                    class="form-control"/>
 
             <label for="firstName">First Name</label><br/>
@@ -70,7 +70,7 @@
                    id="firstName"
                    ng-model="model.user.firstName"
                    type="text"
-                   placeholder="Lauren"
+                   placeholder="alice"
                    class="form-control"/>
 
             <label for="lastName">Last Name</label><br/>
@@ -78,12 +78,12 @@
                    id="lastName"
                    ng-model="model.user.lastName"
                    type="text"
-                   placeholder="Lung"
+                   placeholder="wonderland"
                    class="form-control"/>
         </form>
         <p>
-            <a href="../website/website-list.html" class="btn btn-block btn-primary" role="button">Websites</a>
-            <a href="login.html" class="btn btn-block btn-danger" role="button">Logout</a>
+            <a href="#!/user/{{model.user._id}}/website" class="btn btn-block btn-primary" role="button">Websites</a>
+            <a href="#!/login" class="btn btn-block btn-danger" role="button">Logout</a>
         </p>
     </div>
 </div>

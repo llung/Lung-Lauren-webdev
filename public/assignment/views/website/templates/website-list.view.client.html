@@ -10,7 +10,8 @@
                 </li>
             </ul>
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -54,25 +55,28 @@
 
 
     <div class="container-fluid">
+            <div ng-repeat="website in model.websites">
+                    <a href="../page/page-list.html">{{website.name}}</a>
+                    <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
 
-        <ul class="list-group">
-            <li class="list-group-item">
-                <a href="../page/page-list.html">Address Book App</a>
-                <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
-            </li>
-            <li class="list-group-item">
-                <a href="../page/page-list.html">Blogger</a>
-                <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
-            </li>
-            <li class="list-group-item">
-                <a href="../page/page-list.html">Blogging App</a>
-                <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
-            <li class="list-group-item">
-            <a href="../page/page-list.html">Script Testing App</a>
-            <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
-            </li>
-        </ul>
-
+                <!--            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="../page/page-list.html">{{website.name}}</a>
+                                    <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="../page/page-list.html">{{website.name}}</a>
+                                    <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="../page/page-list.html">{{website.name}}</a>
+                                    <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
+                                <li class="list-group-item">
+                                    <a href="../page/page-list.html">{{website.name}}</a>
+                                    <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
+                                </li>
+                            </ul>-->
+            </div>
     </div>
 
 </div>
