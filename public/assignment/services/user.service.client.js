@@ -25,47 +25,69 @@
 
         //add the 'user' parameter to the local array
         function createUser(user) {
-            users.add(user)
+            user._id = (new Date()).getTime() + "";
+            users.push(user);
+            return user;
         }
 
         //updates the user in the local 'users' array whose _id matches the userId parameter
         function updateUser(userId, user) {
-            var url = "/api/user/" + userId;
-
-            return $http.put(url, user);
+            for(var u in users) {
+                if(users[u]._id === userId) {
+                    users[u] = user;
+                    return;
+                }
+            }
+            //var url = "/api/user/" + userId;
+            //return $http.put(url, user);
         }
 
         //
         function registerUser(user) {      /////////same as createUser??
             var url = "/api/user";
-
             return $http.post(url, user);
         }
 
         //returns the user in local 'user' array whose username matches the 'username' parameter
         function findUserByUsername(username) {
-            var url = "/api/user?username="+username;
-            return $http.get(url);
+            for(var u in users) {
+                if(users[u].username === username) {
+                    return users[u];
+                }
+            }
+            return null;
+            // var url = "/api/user?username="+username;
+            //return $http.get(url);
         }
 
         //returns the user in local 'userId' array whose username matches the 'userId' parameter
         function findUserById(userId) {
-            return $http.get("/api/user/"+userId);
+            for(var u in users) {
+                if(users[u]._id === userId) {
+                    return users[u];
+                }
+            }
+            return null;
+            //return $http.get("/api/user/"+userId);
         }
 
-        //return the user whose username and password mathe the username and password parameter
+        //return the user whose username and password match the username and password parameter
         function findUserByCredentials(username, password) {
-
-            var url = "/api/user?username="+username+"&password="+password;
+            for(var u in users) {
+                var _user = users[u];
+                if (_user.username === username && _user.password === password) {
+                    return _user
+                }
+                return null;
+            }
+            //var url = "/api/user?username="+username+"&password="+password;
             // /user?username=alice&password=alice
-
-            return $http.get(url);
+            //return $http.get(url);
         }
 
         //remove the user whose _user whose _id matches the userId parameter
         function deleteUser(userID) {
             var url = "/api/user/" + userId;
-
             return $http.remove(url);
         }
 

@@ -55,11 +55,12 @@
 
 
     <div class="container-fluid">
-            <div ng-repeat="website in model.websites">
-                    <a href="../page/page-list.html">{{website.name}}</a>
-                    <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
+        <ul class="list-group">
+            <li ng-repeat="website in model.websites" class="list-group-item">
+                    <a href="www.google.com">{{website.name}}</a>
+                    <a href="#!/user/:uid/website/:wid"><span class="pull-right glyphicon glyphicon-cog"></span></a>
 
-                <!--            <ul class="list-group">
+                <!--        <ul class="list-group">
                                 <li class="list-group-item">
                                     <a href="../page/page-list.html">{{website.name}}</a>
                                     <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
@@ -76,7 +77,8 @@
                                     <a href="website-edit.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
                                 </li>
                             </ul>-->
-            </div>
+            </li>
+        </ul>
     </div>
 
 </div>

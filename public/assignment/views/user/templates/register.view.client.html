@@ -1,24 +1,28 @@
 <div class="container-fluid">
+
+    <div ng-show="model.error" class="alert alert-danger">
+        {{model.error}}
+    </div>
     <h1>Register</h1>
 
     <form>
     <input name="firstName"
            id="firstName"
-           ng-model="model.user.firstName"
+           ng-model="user.username"
            type="text"
            placeholder="username"
            class="form-control"/>
 
     <input name="password"
            id="password"
-           ng-model="model.user.lastName"
+           ng-model="user.password"
            type="password"
            placeholder="password"
            class="form-control"/>
 
     <input name="verify-password"
            id="verify-password"
-           ng-model="model.user.password"
+           ng-model="user.password2"
            type="password"
            placeholder="verify password"
            class="form-control"/>

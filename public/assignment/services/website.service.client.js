@@ -15,6 +15,7 @@
             { "_id": "789", "name": "Chess",       "developerId": "234", "description": "Lorem" }
         ];
 
+        //they are declared this this because the is a "service" not a "factory"
         this.findWebsitesByUser = findWebsitesByUser;
         this.createWebsite = createWebsite;
         this.findWebsiteById = findWebsiteById;
@@ -36,12 +37,23 @@
 
         //retrieves the websites in local websites array whose developerId matches the parameter userId
         function findWebsitesByUser(userId) {
+            var sites = [];
 
+            for(var w in websites) {
+                if (websites[w].developerId === userId) {
+                    sites.push(websites[w]);
+                }
+            }
+            return sites;
+
+            /*
             var url = "/api/user/" + userId + "/website";
             return $http.get(url)
                 .then(function (response) {
                     return response.data;
                 });
+
+                */
         }
 
         //updates the website in local 'websites' array whose _id matches the websiteId parameter
