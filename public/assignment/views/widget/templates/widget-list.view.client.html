@@ -55,7 +55,35 @@
 
     <div class="container-fluid">
 
-        <ul class="list-group">
+
+        <div ng-repeat="widget in model.widgets">
+            <div ng-switch="widget.widgetType">
+                <div ng-switch-when="HEADING">
+                    <div ng-switch="widget.size">
+                        <h1 ng-switch-when="1">{{widget.text}}</h1>
+                        <h2 ng-switch-when="2">{{widget.text}}</h2>
+                        <h3 ng-switch-when="3">{{widget.text}}</h3>
+                        <h4 ng-switch-when="4">{{widget.text}}</h4>
+                    </div>
+                </div>
+
+                <div ng-switch-when="IMAGE">
+                    <img ng-src="{{widget.url}}" width="100%">
+                </div>
+
+                <div ng-switch-when="YOUTUBE">
+                    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>-->
+                    <iframe width="560" height="315" src="{{model.trustUrlResource(widget.url)}}" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div ng-switch-when="HTML" ng-bind-html="model.trustHtmlContent(widget.text)">
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--<ul class="list-group">
             <li class="list-group-item">
                 <a href="#">header widget here</a>
                 <span class="pull-right glyphicon glyphicon-align-justify"></span></span>
@@ -71,7 +99,7 @@
                 <span class="pull-right glyphicon glyphicon-align-justify"></span></span>
                 <a href="widget-image.html"><span class="pull-right glyphicon glyphicon-cog"></span></a>
             </li>
-        </ul>
+        </ul>-->
 
     </div>
 

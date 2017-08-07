@@ -3,7 +3,7 @@
         .module("WebAppMaker")
         .controller("EditWebsiteController", EditWebsiteController);
 
-    function EditWebsiteController($routeParams, websiteService) {
+    function EditWebsiteController($location, $routeParams, websiteService) {
         var model = this;
         model.websiteId = $routeParams["wid"];
         model.userId = $routeParams["uid"];
@@ -19,7 +19,7 @@
         init();
 
         function updateWebsite() {
-            websiteService.updateWebsite(model.websiteId, website);
+            websiteService.updateWebsite(model.websiteId, model.website);
         }
 
         function deleteWebsite() {
