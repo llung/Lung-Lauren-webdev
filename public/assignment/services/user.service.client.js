@@ -78,8 +78,8 @@
                 if (_user.username === username && _user.password === password) {
                     return _user
                 }
-                return null;
             }
+            return null;
             //var url = "/api/user?username="+username+"&password="+password;
             // /user?username=alice&password=alice
             //return $http.get(url);
