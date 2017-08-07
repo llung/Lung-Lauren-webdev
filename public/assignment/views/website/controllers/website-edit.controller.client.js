@@ -1,20 +1,21 @@
-(function() {
+(function () {
     angular
         .module("WebAppMaker")
         .controller("EditWebsiteController", EditWebsiteController);
 
     function EditWebsiteController($routeParams, websiteService) {
         var model = this;
-        model.websiteId = $routeParams.websiteId;
-        model._id = $routeParams["_id"];
+        model.websiteId = $routeParams["wid"];
+        model.userId = $routeParams["uid"];
 
         //declare functions here for recordkeeping
         model.updateWebsite = updateWebsite;
         model.deleteWebsite = deleteWebsite;
 
         function init() {
-            model.website = websiteService.findWebsiteById(model._id);
+            model.website = websiteService.findWebsiteById(model.userId, model.websiteId);
         }
+
         init();
 
         function updateWebsite(website) {
@@ -24,7 +25,6 @@
         function deleteWebsite() {
             websiteService.deleteWebsite(model.websiteId);
         }
-
 
 
     }

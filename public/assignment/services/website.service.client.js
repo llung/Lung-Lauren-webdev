@@ -24,8 +24,15 @@
 
         //retrieves the website in local 'websites' array whose _id matches the websiteId parameter
         function findWebsiteById(userId, websiteId) {
-            var url = "/api/user/" + userId + "/website/" + websiteId;
-            return $http.get(url);
+            for(var w in websites) {
+                if (websites[w].developerId === userId && websites[w]._id === websiteId) {
+                    return websites[w];
+                }
+            }
+            return null;
+
+  //          var url = "/api/user/" + userId + "/website/" + websiteId;
+  //          return $http.get(url);
         }
 
         //adds the website parameter instance to the local 'websites' array. The new website's 'developerId' is set to
