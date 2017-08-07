@@ -18,7 +18,7 @@
 
         init();
 
-        function updateWebsite(website) {
+        function updateWebsite() {
             websiteService.updateWebsite(model.websiteId, website);
         }
 
