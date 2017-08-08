@@ -38,7 +38,14 @@
 
         //retrieves the pages in local 'pages' array whose websiteId matches the websiteId parameter
         function findPageByWebsiteId(websiteId) {
+            var _pages = [];
 
+            for(var p in pages) {
+                if(pages[p].websiteId === websiteId) {
+                    _pages.push(pages[p]);
+                }
+            }
+            return _pages;
         }
 
         //removes the page from local pages array whose _id matches the pageId parameter

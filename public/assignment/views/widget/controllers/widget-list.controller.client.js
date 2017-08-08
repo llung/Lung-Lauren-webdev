@@ -7,6 +7,7 @@
         var model = this;
 
         model.userId = $routeParams["uid"];
+        model.websiteId = $routeParams["wid"];
         model.pageId = $routeParams["pid"];
 
         //declare all functions for record
