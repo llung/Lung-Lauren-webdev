@@ -19,14 +19,16 @@
                 model.error = "User not found";
                 return;
             }
-            var result = userService.findUserByCredentials(user.username, user.password);
-
-            if (result === null) {
-                model.error = "User not found";
-            } else {
-                $location.url("user/" + result._id);
-
-            }
+            var promise = userService.findUserByCredentials(user.username, user.password);
+            promise
+                .then(function (response) {
+                    var _user = response.data;
+                    if(_user === "0") {
+                        model.error = "User not found";
+                    } else {
+                        $location.url("profile/"+_user._id);
+                    }
+                });
         }
     }
 

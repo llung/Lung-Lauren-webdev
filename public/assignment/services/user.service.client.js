@@ -9,7 +9,6 @@
             "findUserByUsername": findUserByUsername,
             "findUserByCredentials": findUserByCredentials,
             "findUserById": findUserById,
-            "registerUser": registerUser,   //same as create??
             "updateUser": updateUser,
             "deleteUser" : deleteUser
         };

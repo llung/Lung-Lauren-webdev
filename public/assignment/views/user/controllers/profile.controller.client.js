@@ -17,7 +17,7 @@
         init();
 
         function updateUser(user) {
-            userService.updateUser(user.Id, user);
+          userService.updateUser(user.Id, user);
         }
     }
 })();

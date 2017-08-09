@@ -45,10 +45,12 @@ function findUserByCredentials(req, res) {
         for (var u in users) {
             if (users[u].username === _username && users[u].password === _password) {
                 res.send(users[u]);
+                console.log("found user");
                 return;
             }
         }
     }
+    console.log("not a user");
     res.send("0");
 
 }
