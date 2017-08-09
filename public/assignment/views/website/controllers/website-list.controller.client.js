@@ -1,4 +1,4 @@
-(function() {
+(function () {
     angular
         .module("WebAppMaker")
         .controller("WebsiteListController", WebsiteListController);
@@ -7,8 +7,12 @@
         var model = this;
         model.userId = $routeParams["uid"];
         function init() {
-            model.websites = websiteService.findWebsitesByUser(model.userId);
+            websiteService.findWebsitesByUser(model.userId)
+                .then(function (response) {
+                    model.websites = response.data;
+                })
         }
+
         init();
 
     }
