@@ -16,15 +16,60 @@ app.get("/api/user/:userId", findUserById);
 app.put("/api/user/:userId", updateUser);
 app.delete("/api/user/:userId", deleteUser);
 
+//POST "/api/user"
+function createUser(req, res){
+    var _user = req.body;
+    _user._id = (new Date()).getTime() + "";
+    users.push(_user);
+    res.send(_user);
+}
 
-function createUser(req, res){}
+//GET "/api/user?username=username"
+function findUserByUserName(req, res){
+    var _username = req.query.username;
 
-function findUserByUserName(req, res){}
+    for(u in users) {
+        if(users[u].username === _username) {
+            res.send(users[u]);
+            return;
+        }
+    }
+    res.send("0");
+}
 
-function findUserByCredentials(req, res){}
+//GET "/api/user?username=username&password=password"
+function findUserByCredentials(req, res) {
+    var _username = req.query.username;
+    var _password = req.query.password;
+    if (_username && _password) {
+        for (var u in users) {
+            if (users[u].username === _username && users[u].password === _password) {
+                res.send(users[u]);
+                return;
+            }
+        }
+    }
+    res.send("0");
 
-function findUserById(req, res){}
+}
 
-function updateUser(req, res){}
+//GET "/api/user/:userId"
+function findUserById(req, res){
+    for(var u in users) {
+        if(users[u]._id === req.params.userId) {
+            res.send(users[u]);
+            return;
+        }
+    }
+    res.send("0");
+}
 
-function deleteUser(req, res){}
+//PUT "/api/user/:userId"
+function updateUser(req, res){
+    var _uid = req.params.userId;
+}
+
+//DELETE "/api/user/:userId"
+function deleteUser(req, res){
+    var _uid = req.params.userId;
+}

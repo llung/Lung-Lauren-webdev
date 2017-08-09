@@ -12,12 +12,46 @@ app.get("/api/page/:pageId", findPagesById);
 app.put("/api/page/:pageId", updatePage);
 app.delete("/api/page/:pageId", deletePage);
 
-function createPage(req, res){}
+//POST "/api/website/:websiteId/page"
+function createPage(req, res){
+    var _wid = req.params.websiteId;
+    var _page = req.body;
+    _page._id = (new Date()).getTime() + "";
+    _page.websiteId = _wid;
+    pages.push(_page);
+    res.send(_page);
+}
 
-function findAllPagesForWebsite(req, res){}
+//GET "/api/website/:websiteId/page"
+function findAllPagesForWebsite(req, res){
+    var _wid = req.params.websiteId;
+    var _pages = [];
+    for (var p in pages) {
+        if (pages[p].websiteId ===_wid) {
+            _pages.push(pages[p]);
+        }
+    }
+    res.send(_pages);
+}
 
-function findPagesById(req, res){}
+//GET "/api/page/:pageId"
+function findPagesById(req, res){
+    var _pid = req.params.pageId;
+    var _pages = [];
+    for (var p in pages) {
+        if (pages[p]._Id ===_pid) {
+            _pages.push(pages[p]);
+        }
+    }
+    res.send(_pages);
+}
 
-function updatePage(req, res){}
+//PUT "/api/page/:pageId
+function updatePage(req, res){
+    var _pid = req.params.pageId;
+}
 
-function deletePage(req, res){}
+//DELETE "/api/page/:pageId"
+function deletePage(req, res){
+    var _pid = req.params.pageId;
+}

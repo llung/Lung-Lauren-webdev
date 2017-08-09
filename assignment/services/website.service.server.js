@@ -16,12 +16,46 @@ app.get("/api/website/:websiteId", findWebsiteById);
 app.put("/api/user/:userId/website", updateWebsite);
 app.delete("/api/user/:userId/website", deleteWebsite);
 
-function createWebsite(req, res){}
+//POST "/api/user/:userId/website"
+function createWebsite(req, res){
+    var _uid = req.params.userId;
+    var _website = req.body;
+    _website._id = (new Date()).getTime() + "";
+    _website.developerId = _uid;
+    websites.push(_website);
+    res.send(_website);
+}
 
-function findAllWebsitesForUser(req, res){}
+//GET "/api/user/:userId/website"
+function findAllWebsitesForUser(req, res){
+    var _uid = req.params.userId;
+    var _websites = [];
+    for (var w in websites) {
+        if (websites[w].developerId === _uid) {
+            _websites.push(websites[w]);
+        }
+    }
+    res.send(_websites);
+}
 
-function findWebsiteById(req, res){}
+//GET "/api/website/:websiteId"
+function findWebsiteById(req, res){
+    var _wid = req.params.websiteId;
+    for (var w in websites) {
+        if (websites[w]._id === _wid) {
+            res.send(websites[w])
+            return;
+        }
+    }
+    res.send("0");
+}
 
-function updateWebsite(req, res){}
+//PUT "/api/user/:userId/website"
+function updateWebsite(req, res){
+    var _uid = req.params.userId;
+}
 
-function deleteWebsite(req, res){}
+//DELETE "/api/user/:userId/website"
+function deleteWebsite(req, res){
+    var _uid = req.params.userId;
+}

@@ -8,7 +8,10 @@
         model.userId = $routeParams["uid"];
 
         function init() {
-            model.user = userService.findUserById(model.userId);
+            var promise = userService.findUserById(model.userId);
+            promise.then(function(response) {
+                model.user = response.data;
+            });
         }
 
         init();

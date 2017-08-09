@@ -62,13 +62,7 @@
 
         //returns the user in local 'userId' array whose username matches the 'userId' parameter
         function findUserById(userId) {
-            for(var u in users) {
-                if(users[u]._id === userId) {
-                    return users[u];
-                }
-            }
-            return null;
-            //return $http.get("/api/user/"+userId);
+            return $http.get("/api/user/"+userId);
         }
 
         //return the user whose username and password match the username and password parameter

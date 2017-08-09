@@ -12,12 +12,45 @@ app.get("/api/widget/:widgetId", findWidgetById);
 app.put("/api/widget/:widgetId", updateWidget);
 app.delete("/api/widget/:widgetId", deleteWidget);
 
-function createWidget(req, res){}
+//POST "/api/page/:pageId/widget"
+function createWidget(req, res){
+    var _pid = req.params.pageId;
+    var _page = req.body;
+    _page._id = (new Date()).getTime() + "";
+    _page.websiteId = _pid;
+    pages.push(_page);
+    res.send(_page);
+}
 
-function findAllWidgetsForPage(req, res){}
+//GET "/api/page/:pageId/widget"
+function findAllWidgetsForPage(req, res){
+    var _pages = [];
+    var _pid = req.params.pageId;
+    for (var p in pages) {
+        if (pages[p]._id === _pid) {
+            _pages.push(pages[p]);
+        }
+    }
+    res.send(_pages);
+}
 
-function findWidgetById(req, res){}
+//GET "/api/widget/:widgetId"
+function findWidgetById(req, res){
+    var _widgetId = req.params.widgetId;
+    for (var p in pages) {
+        if (pages[p]._id === _pid) {
+            _pages.push(pages[p]);
+        }
+    }
+    res.send(_pages);
+}
 
-function updateWidget(req, res){}
+//PUT "/api/widget/:widgetId"
+function updateWidget(req, res){
+    var _wid = req.params.userId;
+}
 
-function deleteWidget(req, res){}
+//DELETE "/api/widget/:widgetId"
+function deleteWidget(req, res){
+    var _wid = req.params.userId;
+}
