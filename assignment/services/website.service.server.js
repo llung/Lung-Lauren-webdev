@@ -53,6 +53,15 @@ function findWebsiteById(req, res){
 //PUT "/api/user/:userId/website"
 function updateWebsite(req, res){
     var _uid = req.params.userId;
+    var _website = req.body;
+    for (var w in websites) {
+        if (websites[w]._id === _website._id && websites[w].developerId === _uid) {
+            websites[w] = _website;
+            res.send(_website);
+            return;
+        }
+    }
+    res.sendStatus(404);
 }
 
 //DELETE "/api/user/:userId/website"

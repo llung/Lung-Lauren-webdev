@@ -49,6 +49,15 @@ function findPagesById(req, res){
 //PUT "/api/page/:pageId
 function updatePage(req, res){
     var _pid = req.params.pageId;
+    var _page = req.body;
+    for (var p in pages) {
+        if (pages[p]._id ===_pid) {
+            pages[p] = _page;
+            res.send(_page);
+            return;
+        }
+    }
+    res.sendStatus(404);
 }
 
 //DELETE "/api/page/:pageId"

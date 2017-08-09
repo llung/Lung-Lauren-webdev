@@ -67,9 +67,19 @@ function findUserById(req, res){
 //PUT "/api/user/:userId"
 function updateUser(req, res){
     var _uid = req.params.userId;
+    var _user = req.body;
+    for (var u in users) {
+        if (users[u]._id ===_uid) {
+            users[u] = _user;
+            res.send(_user);
+            return;
+        }
+    }
+    res.sendStatus(404);
 }
 
 //DELETE "/api/user/:userId"
 function deleteUser(req, res){
     var _uid = req.params.userId;
+
 }
