@@ -34,7 +34,7 @@ function createWidget(req, res){
 }
 
 //GET "/api/page/:pageId/widget"
-function findAllWidgetsForPage(req, res){
+function findAllWidgetsForPage(req, res) {
     var _widgets = [];
     var _pid = req.params.pageId;
     for (var w in widgets) {
@@ -74,4 +74,5 @@ function updateWidget(req, res){
 //DELETE "/api/widget/:widgetId"
 function deleteWidget(req, res){
     var _wid = req.params.userId;
+    res.send("0");
 }

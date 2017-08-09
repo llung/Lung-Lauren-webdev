@@ -5,12 +5,6 @@
 
     function pageService($http) {
 
-        var pages = [
-                { "_id": "321", "name": "Post 1", "websiteId": "456", "description": "Lorem" },
-                { "_id": "432", "name": "Post 2", "websiteId": "456", "description": "Lorem" },
-                { "_id": "543", "name": "Post 3", "websiteId": "456", "description": "Lorem" }
-            ];
-
         var api = {
             "createPage" : createPage,
             "findPageByWebsiteId": findPageByWebsiteId,
@@ -22,35 +16,38 @@
 
         //adds the 'page' parameter instance to the local 'pages' array. the new page's websiteId is set to the
         //websiteId parameter
+        //POST "/api/website/:websiteId/page"
         function createPage(websiteId, page) {
-
+            var url = "/api/website/" + websiteId;
+            return $http.post(url, page);
         }
 
         //updates the page in local pages array whose _id matches the pageId parameter
+        //PUT "/api/page/:pageId
         function updatePage(pageId, page) {
-
+            var url = "/api/page/" + pageId;
+            return $http.put(url, page);
         }
 
         //retrieves the page in local pages array whose _id matches the pageId parameter
+        //GET "/api/page/:pageId"
         function findPageById(pageId) {
-
+            var url = "/api/page/" + pageId;
+            return $http.get(url);
         }
 
         //retrieves the pages in local 'pages' array whose websiteId matches the websiteId parameter
+        //GET "/api/website/:websiteId/page"
         function findPageByWebsiteId(websiteId) {
-            var _pages = [];
-
-            for(var p in pages) {
-                if(pages[p].websiteId === websiteId) {
-                    _pages.push(pages[p]);
-                }
-            }
-            return _pages;
+            var url = "api/website/" + websiteId +"/page";
+            return $http.get(url);
         }
 
         //removes the page from local pages array whose _id matches the pageId parameter
+        //DELETE "/api/page/:pageId"
         function deletePage(pageID) {
-
+            var url = "api/page/" + pageId;
+            return $http.delete(url);
         }
 
     }

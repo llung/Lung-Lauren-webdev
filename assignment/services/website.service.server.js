@@ -67,4 +67,6 @@ function updateWebsite(req, res){
 //DELETE "/api/user/:userId/website"
 function deleteWebsite(req, res){
     var _uid = req.params.userId;
+    var _website = req.body;
+    res.send("0");
 }

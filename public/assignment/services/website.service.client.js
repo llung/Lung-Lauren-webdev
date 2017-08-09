@@ -4,17 +4,6 @@
         .service("websiteService", websiteService);
 
     function websiteService($http) {
-
-        var websites = [
-            { "_id": "123", "name": "Facebook",    "developerId": "456", "description": "Lorem" },
-            { "_id": "234", "name": "Tweeter",     "developerId": "456", "description": "Lorem" },
-            { "_id": "456", "name": "Gizmodo",     "developerId": "456", "description": "Lorem" },
-            { "_id": "890", "name": "Go",          "developerId": "123", "description": "Lorem" },
-            { "_id": "567", "name": "Tic Tac Toe", "developerId": "123", "description": "Lorem" },
-            { "_id": "678", "name": "Checkers",    "developerId": "123", "description": "Lorem" },
-            { "_id": "789", "name": "Chess",       "developerId": "234", "description": "Lorem" }
-        ];
-
         //they are declared this this because the is a "service" not a "factory"
         this.findWebsitesByUser = findWebsitesByUser;
         this.createWebsite = createWebsite;
@@ -23,54 +12,43 @@
         this.deleteWebsite = deleteWebsite;
 
         //retrieves the website in local 'websites' array whose _id matches the websiteId parameter
+        //GET "/api/website/:websiteId"
         function findWebsiteById(userId, websiteId) {
-            for(var w in websites) {
-                if (websites[w].developerId === userId && websites[w]._id === websiteId) {
-                    return websites[w];
-                }
-            }
-            return null;
-
-  //          var url = "/api/user/" + userId + "/website/" + websiteId;
-  //          return $http.get(url);
+            var url = "/api/user/website/" + websiteId;
+            return $http.get(url);
         }
 
         //adds the website parameter instance to the local 'websites' array. The new website's 'developerId' is set to
         //the userId parameter
+        //POST "/api/user/:userId/website"
         function createWebsite(userId, website) {
             var url = "/api/user/" + userId + "/website";
             return $http.post(url, website);
         }
 
         //retrieves the websites in local websites array whose developerId matches the parameter userId
+        //GET "/api/user/:userId/website"
         function findWebsitesByUser(userId) {
-            var sites = [];
-
-            for(var w in websites) {
-                if (websites[w].developerId === userId) {
-                    sites.push(websites[w]);
-                }
-            }
-            return sites;
-
-            /*
             var url = "/api/user/" + userId + "/website";
             return $http.get(url)
                 .then(function (response) {
                     return response.data;
                 });
 
-                */
         }
 
         //updates the website in local 'websites' array whose _id matches the websiteId parameter
+        //PUT "/api/user/:userId/website"
         function updateWebsite(websiteID, website) {
-            //return $http
+            var url = "/api/user/" + websiteId + "/website";   //userId???
+            return $http.put(url, website);
         }
 
         //removes the website from local websites array whose _id matches the websiteId parameter
-        function deleteWebsite(websiteID) {
-            //$http.remove(???);
+        //DELETE "/api/user/:userId/website"
+        function deleteWebsite(userId, website) {
+            var url = "api/user" + userId + "/website";
+            return $http.delete(url, website);
         }
 
     }

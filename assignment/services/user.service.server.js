@@ -81,5 +81,6 @@ function updateUser(req, res){
 //DELETE "/api/user/:userId"
 function deleteUser(req, res){
     var _uid = req.params.userId;
+    res.send("0");
 
 }

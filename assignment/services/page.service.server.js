@@ -63,4 +63,5 @@ function updatePage(req, res){
 //DELETE "/api/page/:pageId"
 function deletePage(req, res){
     var _pid = req.params.pageId;
+    res.send("0");
 }
