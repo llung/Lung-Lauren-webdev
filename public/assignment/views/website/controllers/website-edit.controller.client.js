@@ -13,17 +13,22 @@
         model.deleteWebsite = deleteWebsite;
 
         function init() {
-            model.website = websiteService.findWebsiteById(model.userId, model.websiteId);
+            //model.website = websiteService.findWebsiteById(model.userId, model.websiteId);
+
+            var promise = websiteService.findWebsiteById(model.userId, model.websiteId);
+            promise.then(function(response) {
+                model.website = response.data;
+            });
         }
 
         init();
 
-        function updateWebsite() {
-            websiteService.updateWebsite(model.websiteId, model.website);
+        function updateWebsite(_website) {
+            websiteService.updateWebsite(_website._id, _website);
         }
 
-        function deleteWebsite() {
-            websiteService.deleteWebsite(model.websiteId);
+        function deleteWebsite(_website) {
+            websiteService.deleteWebsite(_website._id);
         }
 
 

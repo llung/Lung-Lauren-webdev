@@ -7,7 +7,8 @@
         var model = this;
         model.userId = $routeParams["uid"];
         function init() {
-            websiteService.findWebsitesByUser(model.userId)
+            websiteService
+                .findWebsitesByUser(model.userId)
                 .then(function (response) {
                     model.websites = response.data;
                 })

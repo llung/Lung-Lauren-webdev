@@ -83,6 +83,8 @@
         </form>
         <p>
             <a href="#!/user/{{model.user._id}}/website" class="btn btn-block btn-primary" role="button">Websites</a>
+            <a ng-click="model.updateUser(model.user)" class="btn btn-block btn-success" role="button">Update</a>
+            <a ng-click="model.unregister(model.user)" class="btn btn-default btn-danger btn-block"  role="button">Unregister</a>
             <a href="#!/login" class="btn btn-block btn-danger" role="button">Logout</a>
         </p>
     </div>

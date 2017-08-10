@@ -7,6 +7,9 @@
         var model = this;
         model.userId = $routeParams["uid"];
 
+        model.updateUser = updateUser;
+        model.unregister = unregister;
+
         function init() {
             var promise = userService.findUserById(model.userId);
             promise.then(function(response) {
@@ -17,7 +20,11 @@
         init();
 
         function updateUser(user) {
-          userService.updateUser(user.Id, user);
+          userService.updateUser(model.userId, user);
+        }
+
+        function unregister(user) {
+            userService.deleteUser(user._id);
         }
     }
 })();

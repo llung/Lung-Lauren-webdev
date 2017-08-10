@@ -1,4 +1,5 @@
 var app = require("../../express");
+var widgetModel = require("../model/widget/widget.model.server");
 
 var widgets = [
     {"_id": "123", "widgetType": "HEADING", "pageId": "321", "size": 2, "text": "GIZMODO"},

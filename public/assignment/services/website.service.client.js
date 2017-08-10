@@ -14,7 +14,7 @@
         //retrieves the website in local 'websites' array whose _id matches the websiteId parameter
         //GET "/api/website/:websiteId"
         function findWebsiteById(userId, websiteId) {
-            var url = "/api/user/website/" + websiteId;
+            var url = "/api/website/" + websiteId;
             return $http.get(url);
         }
 
@@ -30,17 +30,13 @@
         //GET "/api/user/:userId/website"
         function findWebsitesByUser(userId) {
             var url = "/api/user/" + userId + "/website";
-            return $http.get(url)
-                .then(function (response) {
-                    return response.data;
-                });
-
+            return $http.get(url);
         }
 
         //updates the website in local 'websites' array whose _id matches the websiteId parameter
         //PUT "/api/user/:userId/website"
         function updateWebsite(websiteID, website) {
-            var url = "/api/user/" + websiteId + "/website";   //userId???
+            var url = "/api/user/" + website.developerId + "/website";   //userId???
             return $http.put(url, website);
         }
 

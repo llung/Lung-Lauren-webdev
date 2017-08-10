@@ -63,16 +63,15 @@
                placeholder="Website name"
                class="form-control"/>
 
-        <label for="website-description">Website Description</label><br/>
-        <textarea name="website-description"
-                  id="website-description"
+        <label for="description">Website Description</label><br/>
+        <textarea name="escription"
+                  id="description"
                   ng-model="model.website.description"
-                  type="text"
                   placeholder="Website description"
                   class="form-control"></textarea>
 
-        <a ng-click="model.updateWebsite()" class="btn btn-block btn-primary" role="button">Update</a>
-        <a ng-click="model.deleteWebsite()" class="btn btn-block btn-danger" role="button">Delete</a>
+        <a ng-click="model.updateWebsite(model.website)" class="btn btn-block btn-primary" role="button">Update</a>
+        <a ng-click="model.deleteWebsite(model.website)" class="btn btn-block btn-danger" role="button">Delete</a>
     </div>
 
 </div>

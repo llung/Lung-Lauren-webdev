@@ -45,14 +45,17 @@
         //return the user whose username and password match the username and password parameter
         //GET "/api/user?username=username&password=password"
         function findUserByCredentials(username, password) {
+            console.log("lalallalalal");
             var url = "/api/user?username="+username+"&password="+password;
+            console.log(url);
             return $http.get(url);
         }
 
         //remove the user whose _user whose _id matches the userId parameter
-        function deleteUser(userID) {
+        function deleteUser(userId) {
             var url = "/api/user/" + userId;
-            return $http.remove(url);
+            var result = $http.delete(url);
+            console.log(result);
         }
 
     }
