@@ -24,7 +24,30 @@
                 controllerAs: "model"
             })
             .when("/courses", {
-                templateUrl: "/user/templates/courses-list.view.client.html",
+                templateUrl: "user/templates/courses-list.view.client.html",
+                controller: "CourseListController",
+                controllerAs: "model"
+            })
+
+
+
+
+
+
+
+
+            .when("/newcourse", {
+                templateUrl: "user/templates/courses-new.view.client.html",
+                controller: "CourseListController",
+                controllerAs: "model"
+            })
+            .when("/viewcourse", {
+                templateUrl: "user/templates/course.view.client.html",
+                controller: "CourseListController",
+                controllerAs: "model"
+            })
+            .when("/friendProfile", {
+                templateUrl: "user/templates/friend-profile.view.client.html",
                 controller: "CourseListController",
                 controllerAs: "model"
             })

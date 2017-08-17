@@ -1,9 +1,15 @@
 <div class="container-fluid">
 
     <div >
-        <h1>Friends</h1>
+        <h1>Friends List</h1>
 
-        Friends page
+        <ul class="list-group">
+            <li class="list-group-item active">
+            </li>
+            <li ng-repeat="friend in model.friends" class="list-group-item">
+                <a href="#!">Friend Name: click to go to general profile info?</a>
+            </li>
+        </ul>
 
     </div>
 </div>

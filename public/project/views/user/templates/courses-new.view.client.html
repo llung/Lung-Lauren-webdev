@@ -1,9 +1,26 @@
+<!-- teacher only page -->
 <div class="container-fluid">
 
-    <div >
-        <h1>Courses New</h1>
+    <h2>New Course</h2>
+    <div>
+        <label for="course-name">Course Name</label><br/>
+        <input name="course-name"
+               id="course-name"
+               ng-model="model.course.name"
+               type="text"
+               placeholder="Course name"
+               class="form-control"/>
 
-        Courses New page
-
+        <label for="course-description">Description</label><br/>
+        <textarea name="course-description"
+                  id="course-description"
+                  ng-model="model.course.description"
+                  placeholder="Course description"
+                  class="form-control"></textarea>
     </div>
+
+    <a ng-click="model.addCourse(model.course)" class="btn btn-block btn-primary" role="button">Add Class</a>
+    <a href="#" class="btn btn-block btn-danger" role="button">Cancel</a>
+
+
 </div>

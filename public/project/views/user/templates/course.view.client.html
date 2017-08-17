@@ -1,9 +1,37 @@
 <div class="container-fluid">
 
-    <div >
-    <h1>Course</h1>
+        <div>
+            <label for="course-name"><h3>Course Name</h3></label><br/>
+            <input name="course-name"
+                   id="course-name"
+                   ng-model="model.course.name"
+                   type="text"
+                   readonly
+                   placeholder="Course name"
+                   class="form-control"/>
 
-Course page
+            <label for="instructor"><h3>Instructor</h3></label><br/>
+            <input name="instructor"
+                   id="instructor"
+                   ng-model="model.course.instructor"
+                   type="text"
+                   readonly
+                   placeholder="Instructor name"
+                   class="form-control"/>
 
-</div>
+            <label for="course-description"><h3>Description</h3></label><br/>
+            <textarea name="course-description"
+                      id="course-description"
+                      readonly
+                      rows="5"
+                      ng-model="model.course.description"
+                      placeholder="Course description"
+                      class="form-control"></textarea>
+        </div>
+    </br>
+
+    <a ng-click="model.unregisterCourse(model.course, userId)" class="btn btn-block btn-primary" role="button">Unregister from Class</a>
+    <a ng-click="model.viewClass(model.course)" class="btn btn-block btn-success" role="button">View Class Roster</a>
+    <a href="#!/courses" class="btn btn-block btn-danger" role="button">Cancel</a>
+
 </div>
