@@ -10,8 +10,19 @@ userModel.addCourse = addCourse;
 userModel.findUserById = findUserById;
 userModel.updateUser = updateUser;
 userModel.deleteUser = deleteUser;
+userModel.addFriendByUsername = addFriendByUsername;
+userModel.removeFriendByUsername = removeFriendByUsername;
 
 module.exports = userModel;
+
+
+function addFriendByUsername(username) {
+
+}
+
+function removeFriendByUsername (username) {
+
+}
 
 function removeCourse(userId, courseId) {
     return userModel

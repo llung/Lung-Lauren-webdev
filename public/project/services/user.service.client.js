@@ -15,11 +15,20 @@
             "updateUser": updateUser,
             "deleteUser" : deleteUser,
             "login" : login,
-            "logout" : logout
+            "logout" : logout,
+            "addFriend" : addFriend,
+            "unfriend" : unfriend
         };
         return api;
 
 
+        function addFriend(username) {
+            return $http.post("/api/addfriend", username);
+        }
+
+        function unfriend(username) {
+            return $http.post(".api/removefriend", username);
+        }
         function createUser(user) {
             return $http.post("/api/register", user);
         }
@@ -40,6 +49,7 @@
         }
 
         function findUserById(userId) {
+            return $http.get("/api/user/" + userId);
         }
 
         function updateUser(user) {

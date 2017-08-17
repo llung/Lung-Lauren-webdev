@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-    <div >
+    <div>
 <!--        <div ng-show="model.error" class="alert alert-danger">
             {{model.error}}
         </div>-->
@@ -9,6 +9,11 @@
         <input ng-model="model.user.username" type="text" class="form-control" id="username" placeholder="Username">
         <input ng-model="model.user.password" type="password" class="form-control" id="password" placeholder="Password">
         <input ng-model="model.user.password2" type="password" class="form-control" id="password2" placeholder="Verfiy Password">
+        <div>Admin</div>
+        <select ng-model="model.user.isAdmin">
+            <option selected value="false">No</option>
+            <option value="true">Yes</option>
+        </select></br></br>
 
 
         <a ng-click="model.register(model.user)" class="btn btn-block btn-primary" role="button">Register</a>

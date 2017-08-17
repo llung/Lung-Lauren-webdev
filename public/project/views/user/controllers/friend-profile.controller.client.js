@@ -3,24 +3,23 @@
         .module("projectApp")
         .controller("FriendsController", FriendsController);
 
-    function FriendsController($location, $rootScope) {
+    function FriendsController($location, userService, $rootScope) {
         var model = this;
 
         model.unfriend = unfriend;
         model.addFriend = addFriend;
 
         function init() {
-
         }
 
         init();
 
-        function addFriend(identifier) {
-
+        function addFriend(username) {
+            userService.addFriend(username);
         }
 
-        function unfriend(identifier) {
-
+        function unfriend(username) {
+            userService.removeFriend(username);
         }
     }
 

@@ -14,9 +14,9 @@
 
         init();
 
-        function addCourse(course, userId) {
-            courseService.createCourse(course);
-            userService.addCourse(course, userId)
+        function addCourse(course) {
+            coursesService.createCourse(course);
+            $location.url("/courseSearch");
         }
     }
 

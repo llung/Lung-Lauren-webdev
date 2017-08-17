@@ -18,6 +18,7 @@
         return api;
 
         function createCourse(course) {
+            return $http.post("/api/newcourse", course);
         }
         function getCourseById(courseId) {
         }

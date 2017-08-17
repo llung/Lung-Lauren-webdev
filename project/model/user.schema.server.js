@@ -8,6 +8,6 @@ var userSchema = mongoose.Schema({
     lastName: String,
     courses: [{type: mongoose.Schema.Types.ObjectId, ref:"CourseModel"}],
     friends: [{type: mongoose.Schema.Types.ObjectId, ref:"UserModel"}],
-    isAdmin: Boolean
+    isAdmin: {type :Boolean, default: false}
 }, {collection: "users"});
 module.exports = userSchema;
