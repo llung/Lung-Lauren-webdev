@@ -16,6 +16,10 @@
     <script src="user/controllers/courses-new.controller.client.js"></script>
     <script src="user/controllers/profile.controller.client.js"></script>
     <script src="user/controllers/friends.controller.client.js"></script>
+    <script src="user/controllers/friend-profile.controller.client.js"></script>
+    <script src="user/controllers/course.controller.client.js"></script>
+    <script src="user/controllers/registered-students.controller.client.js"></script>
+    <script src="user/controllers/course-search.controller.client.js"></script>
 
     <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js" rel="stylesheet"> -->
@@ -30,23 +34,25 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Home Page</a>
+            <a class="navbar-brand" href="#!/courses">Welcome</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Profile</a></li>
+                <li><a href="#">Profile</a></li>
                 <li><a href="#!/courses">Courses</a></li>
                 <li><a href="#!/friends">Friends</a></li>
                 <li><a href="../index.html">Logout</a></li>
                 <li><a href="#!/newcourse">New Course</a></li>
                 <li><a href="#!/viewcourse">view Course</a></li>
                 <li><a href="#!/friendProfile">Friend profile</a></li>
+                <li><a href="#!/classRoster">Class Roster</a></li>
+                <li><a href="#!/courseSearch">Search Classes</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 
-<div ng-view>This is the main page</div>
+<div ng-view></div>
 </body>
 

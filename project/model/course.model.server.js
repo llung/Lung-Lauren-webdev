@@ -1,6 +1,7 @@
 var mongoose = require("mongoose");
 var courseSchema = require("./course.schema.server");
 var courseModel = mongoose.model("CourseModel", courseSchema);
+var userModel = require("./user.model.server");
 
 
 courseModel.createCourse = createCourse;

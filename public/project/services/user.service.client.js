@@ -24,7 +24,7 @@
         function findUserByCredentials(username, password) {
         }
 
-        function removeCourse(user, courseId) {
+        function removeCourse(courseId, userId) {
         }
 
         function addCourse(user, courseId) {

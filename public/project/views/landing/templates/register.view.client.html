@@ -1,9 +1,9 @@
 <div class="container-fluid">
 
     <div >
-        <div ng-show="model.error" class="alert alert-danger">
+<!--        <div ng-show="model.error" class="alert alert-danger">
             {{model.error}}
-        </div>
+        </div>-->
         <h1>Register</h1>
 
         <input ng-model="model.user.username" type="text" class="form-control" id="username" placeholder="Username">
@@ -14,7 +14,16 @@
         <a ng-click="model.register(model.user)" class="btn btn-block btn-primary" role="button">Register</a>
         <a href="#" class="btn btn-block btn-success" role="button">Cancel</a>
 
-
-
     </div>
 </div>
+
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div id="navbar-bottom" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Back</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

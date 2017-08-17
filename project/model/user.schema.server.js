@@ -2,8 +2,7 @@ var mongoose = require("mongoose");
 var userSchema = mongoose.Schema({
     username: String,
     password: String,
-    roles: [{type: String, enum:["admin", "student", "teacher"]}],
-    currentRole: String,
+    teacher : {type :Boolean, default: false},
     firstName: String,
     email : String,
     lastName: String,

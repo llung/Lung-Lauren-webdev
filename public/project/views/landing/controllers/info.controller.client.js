@@ -1,9 +1,9 @@
 (function () {
     angular
         .module("projectApp")
-        .controller("CourseListController", CourseListController);
+        .controller("InfoController", InfoController);
 
-    function CourseListController($location, $rootScope) {
+    function InfoController($location, $rootScope) {
         var model = this;
 
         function init() {

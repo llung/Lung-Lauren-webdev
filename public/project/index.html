@@ -15,6 +15,7 @@
     <script src="views/landing/controllers/login.controller.client.js"></script>
     <script src="views/landing/controllers/landing.controller.client.js"></script>
     <script src="views/landing/controllers/register.controller.client.js"></script>
+    <script src="views/landing/controllers/info.controller.client.js"></script>
 
     <link href="../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js" rel="stylesheet"> -->
@@ -31,25 +32,19 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Home Page</a>
+            <a class="navbar-brand" href="#">Welcome</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-right">
                 <li><a href="#!/login">Login</a></li>
                 <li><a href="#!/register">Register</a></li>
+                <li><a href="#!/about">About</a></li>
             </ul>
-        </div><!--/.nav-collapse -->
+        </div>
     </div>
 </nav>
 
 
-
-
-
-
-
-</br></br></br></br>
-
-<div ng-view>test</div>
+<div ng-view></div>
 
 </body>

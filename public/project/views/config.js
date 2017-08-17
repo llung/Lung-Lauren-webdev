@@ -28,6 +28,11 @@
                 controller: "CourseListController",
                 controllerAs: "model"
             })
+            .when("/profile", {
+                templateUrl: "user/templates/profile.view.client.html",
+                controller: "ProfileController",
+                controllerAs: "model"
+            })
 
 
 
@@ -49,6 +54,16 @@
             .when("/friendProfile", {
                 templateUrl: "user/templates/friend-profile.view.client.html",
                 controller: "CourseListController",
+                controllerAs: "model"
+            })
+            .when("/classRoster", {
+                templateUrl: "user/templates/registered-students.view.client.html",
+                controller: "RegisteredStudentsController",
+                controllerAs: "model"
+            })
+            .when("/courseSearch", {
+                templateUrl: "user/templates/course-search.view.client.html",
+                controller: "CourseSearchController",
                 controllerAs: "model"
             })
 

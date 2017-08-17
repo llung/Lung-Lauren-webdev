@@ -1,13 +1,13 @@
 <div class="container-fluid">
 
     <div >
-        <h1>Friends List</h1>
+        <h1>Student List</h1>
 
         <ul class="list-group">
             <li class="list-group-item active">
             </li>
-            <li ng-repeat="friend in model.friends" class="list-group-item">
-                <a href="#!">Friend Name: click to go to general profile info?</a>
+            <li ng-repeat="student in model.courses.students" class="list-group-item">
+                <a href="#!">{{student.name}}</a>
             </li>
         </ul>
 
@@ -18,7 +18,7 @@
     <div class="container-fluid">
         <div id="navbar-bottom" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#!/profile">Back</a></li>
+                <li><a href="#!/viewcourse">Back</a></li>
 
             </ul>
         </div>

@@ -3,7 +3,6 @@
     <div >
         <h1>Friend Profile</h1>
 
-
         <div class="container-fluid">
             <form>
                 <label for="firstName">First Name</label><br/>
@@ -36,9 +35,21 @@
             </form>
             </br>
             <p>
-                <a href="#!/user/{{model.user._id}}/courses" class="btn btn-block btn-primary" role="button">Courses</a>
+                <a ng-click="model.addFriend(identifier)" class="btn btn-block btn-primary" role="button">Unfriend</a>
+                <a ng-click="model.unfriend(identifier)" class="btn btn-block btn-primary" role="button">Add Friend</a>
             </p>
         </div>
 
     </div>
 </div>
+
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div id="navbar-bottom" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#!/friends">Back</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

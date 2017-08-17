@@ -25,10 +25,15 @@
                 controller: "RegisterController",
                 controllerAs: "model"
             })
+            .when("/about", {
+                templateUrl: "views/landing/templates/info.view.client.html",
+                controller: "InfoController",
+                controllerAs: "model"
+            })
+
             .when("/profile", {    ///////nope not working
                 redirectTo : "views/home.html"
             })
-
 
     }
 })();
