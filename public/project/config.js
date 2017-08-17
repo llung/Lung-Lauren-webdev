@@ -31,8 +31,10 @@
                 controllerAs: "model"
             })
 
-            .when("/profile", {    ///////nope not working
-                redirectTo : "views/mainPage.html"
+            .otherwise({
+                redirectTo : function() {
+                    window.location = "views/mainPage.html";
+                }
             })
 
     }

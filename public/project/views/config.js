@@ -33,8 +33,10 @@
                 controller: "ProfileController",
                 controllerAs: "model"
             })
-            .when("/logout", {
-                redirectTo: "../index.html"
+            .otherwise({
+                redirectTo : function() {
+                    window.location = "views/mainPage.html";
+                }
             })
 
 
