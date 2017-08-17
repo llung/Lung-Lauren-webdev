@@ -23,7 +23,7 @@
                 .login(user)
                 .then (function(res) {
                     var user = res.data;
-                    $location.url("/profile");
+                    $location.path("/profile");
                 })
         }
     }
