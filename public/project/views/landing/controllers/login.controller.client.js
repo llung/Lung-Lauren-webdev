@@ -19,7 +19,12 @@
                 model.error = "User not found";
                 return;
             }
-            $location.url("/profile/:" + user._id);
+            userService
+                .login(user)
+                .then (function(res) {
+                    var user = res.data;
+                    $location.url("/profile");
+                })
         }
     }
 

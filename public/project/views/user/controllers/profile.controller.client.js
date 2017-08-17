@@ -3,11 +3,12 @@
         .module("projectApp")
         .controller("ProfileController", ProfileController);
 
-    function ProfileController($location, userService, courseService, $rootScope) {
+    function ProfileController($location, userService, coursesService, $rootScope) {
         var model = this;
 
         model.update = update;
         model.unregister = unregister;
+        model.logout = logout;
 
         function init() {
 
@@ -25,6 +26,15 @@
                 courses[c].removeStudent(userId);
             }
             userService.deleteUser(userId);
+        }
+
+        function logout() {
+            userService
+                .logout()
+                .then ( function (res) {
+                    $location.url("/");
+                })
+
         }
 
     }

@@ -3,7 +3,7 @@
         .module("projectApp")
         .controller("CoursesNewController", CoursesNewController);
 
-    function CoursesNewController($location, courseService, userService, $rootScope) {
+    function CoursesNewController($location, coursesService, userService, $rootScope) {
         var model = this;
 
         model.addCourse = addCourse;

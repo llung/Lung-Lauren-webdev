@@ -33,6 +33,8 @@
         }
         function removeStudent(courseId, userId) {
         }
+        function deleteCourse(courseId) {
+        }
 
 
     }

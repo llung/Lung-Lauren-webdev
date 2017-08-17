@@ -18,7 +18,13 @@
                 model.error = "Please enter valid information";
                 return;
             }
-            userService.createUser(user)
+            userService
+                .createUser(user)
+                .then(function(res) {
+                    var user = res.data;
+                    $rootScope.currentUser = user;
+                    $location.url("/user/" + user._id);
+                })
 
         }
 
