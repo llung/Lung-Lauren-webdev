@@ -21,12 +21,16 @@
 
 
         function createUser(user) {
+            return $http.post("/api/register", user);
         }
 
         function findUserByCredentials(username, password) {
         }
 
         function removeCourse(courseId, userId) {
+            info.course = courseId;
+            info.user = userId;
+            $http.post("/api/removecourse", info);
         }
 
         function addCourse(user, courseId) {
@@ -38,7 +42,8 @@
         function findUserById(userId) {
         }
 
-        function updateUser(userId, user) {
+        function updateUser(user) {
+            return $http.post("/api/updateUser", user);
         }
 
         function deleteUser(userId) {

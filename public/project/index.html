@@ -12,13 +12,15 @@
     <script src="app.js"></script>
     <script src="config.js"></script>
 
-    <script src="services/user.service.client.js"></script>
-    <script src="services/courses.service.client.js"></script>
+
 
     <script src="views/landing/controllers/login.controller.client.js"></script>
     <script src="views/landing/controllers/landing.controller.client.js"></script>
     <script src="views/landing/controllers/register.controller.client.js"></script>
     <script src="views/landing/controllers/info.controller.client.js"></script>
+
+    <script src="services/user.service.client.js"></script>
+    <script src="services/courses.service.client.js"></script>
 
     <link href="../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js" rel="stylesheet"> -->
@@ -33,11 +35,16 @@
 <body>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Welcome</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="#">Welcome</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div id="navbar" class="navbar-collapse collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#!/login">Login</a></li>
                 <li><a href="#!/register">Register</a></li>
@@ -46,7 +53,6 @@
         </div>
     </div>
 </nav>
-
 
 <div ng-view></div>
 

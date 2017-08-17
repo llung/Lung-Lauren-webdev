@@ -32,6 +32,9 @@
         function addStudent(course) {
         }
         function removeStudent(courseId, userId) {
+            info.course = courseId;
+            info.user = userId;
+            return $http.post("/api/removestudent", info)
         }
         function deleteCourse(courseId) {
         }

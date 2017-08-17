@@ -33,6 +33,9 @@
                 controller: "ProfileController",
                 controllerAs: "model"
             })
+            .when("/logout", {
+                redirectTo: "../index.html"
+            })
 
 
 

@@ -9,7 +9,27 @@ passport.deserializeUser(deserializeUser);
 
 app.post("/api/login", passport.authenticate('local'), login);
 app.post("/api/logout", logout);
+app.post("/api/register", createUser);
+app.post("/updateUser", updateUser);
+app.post("/removecourse", removeCourse);
 
+function removeCourse(req, res) {
+    courseId = req.body.info.course;
+    userId = req.body.info.user;
+    userModel.removeCourse(userId, courseId)
+    return res.json(userId);
+}
+
+function updateUser(req, res) {
+    var user = req.body.user;
+    userModel.updateUser(user._id, user);
+    return res.json(user);
+}
+function createUser(req, res) {
+    var user = req.body.user;
+    userModel.createUser(user);
+    return res.json(user);
+}
 
 function localStrategy(username, password, done) {
     userModel
@@ -34,4 +54,24 @@ function login(req, res) {
 function logout(req, res) {
     req.logOut();
     res.send(200);
+}
+
+
+//to help define what we want in the cookie
+//user the user object to encode in cookie
+function serializeUser(user, done) {
+    done(null, user);
+}
+
+function deserializeUser(user, done) {
+    userModel
+        .findUserById(user._id)
+        .then(
+            function(user){
+                done(null, user);
+            },
+            function(err){
+                done(err, null);
+            }
+        );
 }

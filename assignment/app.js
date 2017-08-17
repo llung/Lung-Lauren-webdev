@@ -1,6 +1,6 @@
 var app = require('../express');
 
-//var db = require("./model/database");
+//ar db = require("./model/database");
 
 require("./services/user.service.server");
 require("./services/website.service.server");

@@ -17,22 +17,24 @@
         init();
 
         function update(user) {
-            userService.updateUser(user);
+            var u = userService.updateUser(user);
+            console.log(u);
+            $location.url("/profile");
         }
 
-        function unregister(userId) {
-            var courses = courseServer.getCoursesByUserId(userId);
+        function unregister(user) {
+            var courses = coursesService.getCoursesByUserId(user._id);
             for (var c in courses) {
-                courses[c].removeStudent(userId);
+                courses[c].removeStudent(user._id);
             }
-            userService.deleteUser(userId);
+            userService.deleteUser(user._id);
         }
 
         function logout() {
             userService
                 .logout()
                 .then ( function (res) {
-                    $location.url("/");
+                    $location.url("/logout");
                 })
 
         }

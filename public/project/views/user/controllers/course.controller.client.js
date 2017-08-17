@@ -19,6 +19,7 @@
         function unregisterCourse(courseId, userId) {
             coursesService.removeStudent(courseId, userId);
             userService.removeCourse(courseId, userId);
+            $location.url("/courses");
         }
 
         function viewClass(courseId) {
