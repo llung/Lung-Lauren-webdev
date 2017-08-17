@@ -8,54 +8,38 @@
             "createUser" : createUser,
             "findUserByUsername": findUserByUsername,
             "findUserByCredentials": findUserByCredentials,
+            "removeCourse" : removeCourse,
+            "addCourse" : addCourse,
+            "findFriendById" : findFriendById,
             "findUserById": findUserById,
             "updateUser": updateUser,
             "deleteUser" : deleteUser
         };
         return api;
 
-        //add the 'user' parameter to the local array
-        //POST "/api/user"
+
         function createUser(user) {
-            var url = "/api/user";
-            $http.post(url, user);
         }
 
-        //updates the user in the local 'users' array whose _id matches the userId parameter
-        //PUT "/api/user/:userId"
-        function updateUser(userId, user) {
-            var url = "/api/user/" + userId;
-            return $http.put(url, user);
-        }
-
-        //returns the user in local 'user' array whose username matches the 'username' parameter
-        //GET "/api/user?username=username"
-        function findUserByUsername(username) {
-            var url = "/api/user?username=" + username;
-            return $http.get(url);
-        }
-
-        //returns the user in local 'userId' array whose username matches the 'userId' parameter
-        //GET "/api/user/:userId"
-        function findUserById(userId) {
-            var url = "/api/user/" + userId;
-            return $http.get(url);
-        }
-
-        //return the user whose username and password match the username and password parameter
-        //GET "/api/user?username=username&password=password"
         function findUserByCredentials(username, password) {
-            console.log("lalallalalal");
-            var url = "/api/user?username="+username+"&password="+password;
-            console.log(url);
-            return $http.get(url);
         }
 
-        //remove the user whose _user whose _id matches the userId parameter
+        function removeCourse(user, courseId) {
+        }
+
+        function addCourse(user, courseId) {
+        }
+
+        function findFriendById (userId) {
+        }
+
+        function findUserById(userId) {
+        }
+
+        function updateUser(userId, user) {
+        }
+
         function deleteUser(userId) {
-            var url = "/api/user/" + userId;
-            var result = $http.delete(url);
-            console.log(result);
         }
 
     }
