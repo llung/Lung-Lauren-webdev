@@ -49,9 +49,10 @@ function createUser(user) {
     return userModel.create(user);
 }
 
-//retuurn a user with amd ._id matching the parameter
+//return a user with amd ._id matching the parameter
 function findUserById(userId) {
     return userModel
         .findById(userId)
         .populate('websites', 'name');
 }
+

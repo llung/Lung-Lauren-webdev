@@ -23,7 +23,7 @@
             promise
                 .then(function (response) {
                     var _user = response.data;
-                    console.log(_user)
+                    console.log(_user);
                     if(_user === "0") {
                         model.error = "User not found";
                     } else {

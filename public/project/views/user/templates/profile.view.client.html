@@ -1,0 +1,51 @@
+<div class="container-fluid">
+
+    <div >
+        <h1>Profile</h1>
+
+
+        <div class="container-fluid">
+            <form>
+                <label for="firstName">First Name</label><br/>
+                <input name="firstName"
+                       id="firstName"
+                       ng-model="model.user.firstName"
+                       type="text"
+                       placeholder="alice"
+                       class="form-control"/>
+
+                <label for="lastName">Last Name</label><br/>
+                <input name="lastName"
+                       id="lastName"
+                       ng-model="model.user.lastName"
+                       type="text"
+                       placeholder="wonderland"
+                       class="form-control"/>
+                <label for="username">Username</label><br/>
+                <input name="username"
+                       id="username"
+                       ng-model="model.user.username"
+                       readonly
+                       type="text"
+                       placeholder="alice"
+                       class="form-control"/>
+
+                <label for="email">Email</label><br/>
+                <input name="email"
+                       id="email"
+                       ng-model="model.user.email"
+                       type="email"
+                       placeholder="alice@wonderland.com"
+                       class="form-control"/>
+
+            </form>
+            </br>
+            <p>
+                <a href="#!/user/{{model.user._id}}/courses" class="btn btn-block btn-primary" role="button">Courses</a>
+                <a ng-click="model.updateUser(model.user)" class="btn btn-block btn-success" role="button">Update</a>
+                <a ng-click="model.unregister(model.user)" class="btn btn-default btn-danger btn-block"  role="button">Unregister</a>
+            </p>
+        </div>
+
+    </div>
+</div>

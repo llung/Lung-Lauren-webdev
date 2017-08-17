@@ -13,6 +13,8 @@
     "jquery": "^3.2.1",
     "jqueryui": "^1.11.1",
     "mongoose": "^4.11.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "q": "^1.5.0"
   },
   "devDependencies": {},

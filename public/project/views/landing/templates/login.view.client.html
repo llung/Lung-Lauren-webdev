@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-    <div >
+    <div>
         <div ng-show="model.error" class="alert alert-danger">
             {{model.error}}
         </div>
@@ -10,8 +10,9 @@
         <input ng-model="model.user.password" type="password" class="form-control" id="password" placeholder="Password">
 
 
-
         <a ng-click="model.login(model.user)" class="btn btn-block btn-primary" role="button">Login</a>
+        <a href="views/mainPage.html" class="btn btn-block btn-primary" role="button">Login(hard coded)</a>
         <a href="#!/register" class="btn btn-block btn-success" role="button">Register</a>
+
     </div>
 </div>

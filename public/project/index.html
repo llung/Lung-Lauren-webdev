@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="projectApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +7,21 @@
 
     <title>Home Page</title>
 
+    <script src="../vendor/angular/angular.js"></script>
+    <script src="../vendor/angular/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+
+    <script src="views/landing/controllers/login.controller.client.js"></script>
+    <script src="views/landing/controllers/landing.controller.client.js"></script>
+    <script src="views/landing/controllers/register.controller.client.js"></script>
+
     <link href="../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js" rel="stylesheet"> -->
     <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="../vendor/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet"/>
 
-    <script src="../vendor/angular/angular.js"></script>
-    <script src="../vendor/angular/angular-route.js"></script>
-    <script src="app.js"></script>
 
 
 </head>
@@ -29,12 +35,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#!/about">About</a></li>
-                <li><a href="#!/contact">Contact</a></li>
                 <li><a href="#!/login">Login</a></li>
                 <li><a href="#!/register">Register</a></li>
-
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -46,7 +48,8 @@
 
 
 
+</br></br></br></br>
 
+<div ng-view>test</div>
 
-<div ng-view></div>
-
+</body>
