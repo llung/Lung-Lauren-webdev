@@ -32,7 +32,7 @@
             })
 
             .when("/profile", {    ///////nope not working
-                redirectTo : "views/home.html"
+                redirectTo : "views/mainPage.html"
             })
 
     }
