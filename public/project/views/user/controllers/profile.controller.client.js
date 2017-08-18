@@ -5,6 +5,7 @@
 
     function ProfileController($location, userService, coursesService, $rootScope, user) {
         var model = this;
+        console.log(user);
         var userId = user._id;
 
         model.update = update;
