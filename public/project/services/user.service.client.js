@@ -17,7 +17,8 @@
             "login" : login,
             "logout" : logout,
             "addFriend" : addFriend,
-            "unfriend" : unfriend
+            "unfriend" : unfriend,
+            "checkLogin" :checkLogin
         };
         return api;
 
@@ -68,6 +69,7 @@
         }
 
         function checkLogin() {
+            console.log("ddddddd");
             return $http.get("/api/checkLogin")
                 .then(function (response) {
                     return response.data;

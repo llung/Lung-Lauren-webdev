@@ -40,11 +40,7 @@
                 }
             })
 
-            .otherwise({
-                redirectTo : function() {
-                    window.location = "../index.html";
-                }
-            })
+
 
 
 
@@ -79,9 +75,18 @@
                 controllerAs: "model"
             })
 
+
+
+            .otherwise({
+                redirectTo : function() {
+                    window.location = "../index.html";
+                }
+            })
+
     }
     function checkLogin(userService, $q, $location) {
         var deferred = $q.defer();
+        console.log(deferred);
         userService
             .checkLogin()
             .then(function (user) {
