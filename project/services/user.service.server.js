@@ -8,12 +8,19 @@ passport.serializeUser(serializeUser);
 passport.deserializeUser(deserializeUser);
 
 app.post("/api/login", passport.authenticate('local'), login);
+app.get('/api/checkLogin',checkLogin);
 app.post("/api/logout", logout);
 app.post("/api/register", createUser);
 app.post("/api/updateUser", updateUser);
 app.delete("/api/removecourse", removeCourse);
 app.post("/api/addfriend", addFriend);
 app.post("/api/removefriend", unfriend);
+
+
+function checkLogin(req, res) {
+    console.log("in checkLogin in user.service.server");
+    res.send(req.isAuthenticated() ? req.user : '0');
+}
 
 function addFriend(req, res) {
     var n = req.body.username;

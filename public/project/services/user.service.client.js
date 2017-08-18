@@ -66,5 +66,12 @@
         function logout(user) {
             return $http.post("/api/logout");
         }
+
+        function checkLogin() {
+            return $http.get("/api/checkLogin")
+                .then(function (response) {
+                    return response.data;
+                });
+        }
     }
 })();

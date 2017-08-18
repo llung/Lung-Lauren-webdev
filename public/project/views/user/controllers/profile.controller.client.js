@@ -3,22 +3,25 @@
         .module("projectApp")
         .controller("ProfileController", ProfileController);
 
-    function ProfileController($location, userService, coursesService, $rootScope) {
+    function ProfileController($location, userService, coursesService, $rootScope, user) {
         var model = this;
+        var userId = user._id;
 
         model.update = update;
         model.unregister = unregister;
         model.logout = logout;
 
         function init() {
-
+            userService.findUserById(userId)
+                .then(function (response) {
+                    model.user = response.data;
+                });
         }
 
         init();
 
         function update(user) {
             var u = userService.updateUser(user);
-            console.log(u);
             $location.url("/profile");
         }
 

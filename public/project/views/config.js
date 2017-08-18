@@ -16,7 +16,10 @@
             .when("/", {
                 templateUrl: "user/templates/profile.view.client.html",
                 controller: "ProfileController",
-                controllerAs: "model"
+                controllerAs: "model",
+                resolve: {
+                    user: checkLogin
+                }
             })
             .when("/friends", {
                 templateUrl: "user/templates/friends.view.client.html",
@@ -31,11 +34,15 @@
             .when("/profile", {
                 templateUrl: "user/templates/profile.view.client.html",
                 controller: "ProfileController",
-                controllerAs: "model"
+                controllerAs: "model",
+                resolve: {
+                    user: checkLogin
+                }
             })
+
             .otherwise({
                 redirectTo : function() {
-                    window.location = "views/mainPage.html";
+                    window.location = "../index.html";
                 }
             })
 
@@ -72,6 +79,20 @@
                 controllerAs: "model"
             })
 
+    }
+    function checkLogin(userService, $q, $location) {
+        var deferred = $q.defer();
+        userService
+            .checkLogin()
+            .then(function (user) {
+                if(user === '0') {
+                    deferred.reject();
+                    $location.url("/login");
+                } else {
+                    deferred.resolve(user);
+                }
+            });
+        return deferred.promise;
     }
 })();
 
