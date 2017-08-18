@@ -3,7 +3,7 @@
         .module("projectApp")
         .controller("LoginController", LoginController);
 
-    function LoginController($location, $rootScope,userService) {
+    function LoginController($location, $rootScope, userService) {
         var model = this;
 
         model.login = login;

@@ -50,7 +50,7 @@
         }
 
         function findUserById(userId) {
-            return $http.get("/api/user/" + userId);
+            return $http.get("/api/user/");
         }
 
         function updateUser(user) {
@@ -61,6 +61,7 @@
         }
 
         function login (user) {
+            console.log("post api/login")
             return $http.post("/api/login", user);
         }
 
@@ -70,7 +71,7 @@
 
         function checkLogin() {
             console.log("ddddddd");
-            return $http.get("/api/checkLogin")
+            $http.get("/api/checkLogin")
                 .then(function (response) {
                     return response.data;
                 });

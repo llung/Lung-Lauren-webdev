@@ -15,6 +15,14 @@ app.post("/api/updateUser", updateUser);
 app.delete("/api/removecourse", removeCourse);
 app.post("/api/addfriend", addFriend);
 app.post("/api/removefriend", unfriend);
+app.get("api/user", findUserById);
+
+function findUserById(req, res) {
+    console.log("findUserById");
+    var user = userModel.findUserById(req.user._id);
+    console.log(user);
+    return res.json(user);
+}
 
 
 function checkLogin(req, res) {
@@ -29,7 +37,7 @@ function addFriend(req, res) {
 }
 
 function unfriend(req, res) {
-    var n = req.body.username;
+    var n = req.usesr.username;
     userModel.removeFriendByUsername(username);
     return res.json(n); //check to see if we are even friends?
 }
@@ -42,7 +50,7 @@ function removeCourse(req, res) {
 }
 
 function updateUser(req, res) {
-    var user = req.body.user;
+    var user = req.body;
     userModel.updateUser(user._id, user);
     return res.json(user);
 }
@@ -71,6 +79,7 @@ function localStrategy(username, password, done) {
 }
 
 function login(req, res) {
+    console.log("reached the login function iin user.service.server")
     var user = req.user;
     res.json(user);
 }

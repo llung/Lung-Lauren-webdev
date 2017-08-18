@@ -97,6 +97,7 @@
                     deferred.resolve(user);
                 }
             });
+        console.log(deferred.promise);
         return deferred.promise;
     }
 })();
