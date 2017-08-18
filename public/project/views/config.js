@@ -34,10 +34,7 @@
             .when("/profile", {
                 templateUrl: "user/templates/profile.view.client.html",
                 controller: "ProfileController",
-                controllerAs: "model",
-                resolve: {
-                    user: checkLogin
-                }
+                controllerAs: "model"
             })
 
 
